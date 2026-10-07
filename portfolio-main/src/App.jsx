@@ -4,7 +4,7 @@ import portrait from './assets/profile.jpg';
 
 // ─── Content ───────────────────────────────────────────────────────────────
 const facts = [
-  { value: '3년+', label: '보안 엔지니어·보안운영 경력' },
+  { value: '3년+', label: '정보보안 실무 경력' },
   { value: '40개', label: 'DLP 유지보수 사이트' },
   { value: '3,500대', label: '현재 운영 중인 PC' },
   { value: '6종', label: '운영 중인 보안솔루션' },
@@ -22,8 +22,8 @@ const trace = [
 
 const practices = [
   {
-    title: '엔드포인트 보안 운영',
-    desc: '대웅그룹 19개 계열사, PC 약 3,500대의 DLP·EDR·MDM·문서중앙화·데이터 완전삭제·VPN을 운영합니다. 이전에는 금융·공공기관 DLP 신규 구축 15개, 유지보수 40개 사이트를 맡아 저장매체·파일 첨부·출력물 통제 정책을 설계했습니다.',
+    title: '보안정책 및 엔드포인트 운영',
+    desc: '대웅그룹 19개 계열사, PC 약 3,500대의 DLP·EDR·MDM·문서중앙화·데이터 완전삭제·VPN 정책을 관리합니다. 예외 요청은 업무 영향과 보안 위험을 함께 검토해 허용 범위를 정하고, 사용자 교육으로 현업의 정책 준수를 지원합니다.',
   },
   {
     title: '침해사고 탐지와 대응',
@@ -43,7 +43,7 @@ const practices = [
   },
   {
     title: '보안 운영 자동화',
-    desc: 'Shell Script로 구축 작업을 표준화하고, Python·Google Apps Script로 예외 권한 만료 안내를, 인사 DB·API 연동으로 계정 동기화를 자동화했습니다.',
+    desc: 'Python·Google Apps Script로 예외 권한 만료 안내를, 인사 DB·API 연동으로 계정 동기화를 자동화했습니다. 실행 기록과 이력을 남겨 결과를 추적할 수 있는 구조까지 함께 만듭니다.',
   },
 ];
 
@@ -308,6 +308,7 @@ const skills = [
   { group: '시스템', items: ['Linux (CentOS, Rocky)', 'Docker', 'VMware', 'Apache', 'Zabbix'] },
   { group: '데이터', items: ['MySQL', 'MariaDB', 'MS SQL Server', 'API 연동'] },
   { group: '자동화', items: ['Shell Script', 'Python', 'Google Apps Script', 'Make'] },
+  { group: '보안 관리', items: ['보안정책·예외 관리', '보안솔루션 POC·도입 평가', 'OS·DBMS 취약점 점검', '사용자 보안교육'] },
 ];
 
 const clients = [
@@ -613,7 +614,7 @@ export default function Portfolio() {
 
       <header className="top">
         <div className="wrap">
-          <a href="#top" className="brand"><i><Shield size={16} /></i>류은석<small>보안 엔지니어</small></a>
+          <a href="#top" className="brand"><i><Shield size={16} /></i>류은석<small>정보보안 전문가</small></a>
           <nav aria-label="섹션 이동">
             {nav.slice(0, 3).map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}
             <a className="cta" href="#contact">연락하기</a>
@@ -626,11 +627,11 @@ export default function Portfolio() {
           <span className="blob a" aria-hidden="true" /><span className="blob b" aria-hidden="true" />
           <div className="wrap hero-grid">
             <div>
-              <span className="badge"><b aria-hidden="true" />엔드포인트 보안 운영 · 침해사고 대응</span>
-              <h1>원인이 확인될 때까지<br /><span className="grad">추적하는 보안 엔지니어</span></h1>
+              <span className="badge"><b aria-hidden="true" />정보보안 전문가 · 보안 운영 3년+</span>
+              <h1>현업에서 꾸준히 작동하는<br /><span className="grad">보안체계를 만듭니다</span></h1>
               <p className="lead">
-                금융·공공기관의 DLP를 구축하고 침해사고를 분석해 왔고, 지금은 그룹사 엔드포인트 보안을 운영합니다.
-                탐지 결과만으로 판단하지 않고 로그와 파일, 네트워크를 직접 확인해 조치와 운영 기준으로 연결합니다.
+                보안솔루션을 고객사에 구축하는 엔지니어와 조직 내부에서 운영하는 담당자를 모두 경험했습니다.
+                정책이 업무에 주는 영향을 함께 검토하고, 보안 이벤트는 로그와 파일, 네트워크로 직접 확인해 조치와 운영 기준으로 연결합니다.
               </p>
               <div className="actions">
                 <a className="btn primary" href="#cases">경력기술서 보기</a>
@@ -650,7 +651,7 @@ export default function Portfolio() {
                 <circle cx="87" cy="313" r="6" fill="#1e5eff" fillOpacity=".7" />
               </svg>
               <div className="photo"><img src={portrait} alt="류은석 프로필 사진" /></div>
-              <div className="chip c1"><span className="ico"><Server size={15} /></span><strong>19개 계열사</strong>그룹사 보안 운영</div>
+              <div className="chip c1"><span className="ico"><Server size={15} /></span><strong>19개 계열사</strong>보안정책·예외 관리</div>
               <div className="chip c2"><span className="ico"><Shield size={15} /></span><strong>EDR 도입</strong>평가부터 계약까지</div>
               <div className="chip c3"><span className="ico"><Activity size={15} /></span><strong>침해 분석</strong>유입 경로까지 추적</div>
             </div>
@@ -672,11 +673,11 @@ export default function Portfolio() {
             <div>
               <div className="head"><h2 id="about-h">같은 정책도 환경에 따라<br />결과가 달라집니다</h2></div>
               <p>
-                3년간 DLP 엔지니어로 일하며 같은 통제라도 고객사의 업무 방식에 따라 전혀 다른 문제가 생기는 것을 봤습니다.
+                3년간 고객사의 DLP를 구축·운영하며 같은 통제라도 고객사의 업무 방식에 따라 전혀 다른 문제가 생기는 것을 봤습니다.
                 그래서 정책을 적용할 때는 업무 영향을 먼저 확인하고, 문제가 생기면 증상보다 원인을 찾는 데 시간을 씁니다.
               </p>
               <p>
-                지금은 19개 계열사의 보안솔루션을 운영하며 정책과 예외를 관리하고, 새 솔루션의 도입 평가까지 맡고 있습니다.
+                지금은 조직 내부의 보안 담당자로서 19개 계열사의 보안솔루션 정책과 예외를 관리하고, 새 솔루션의 도입 평가까지 맡고 있습니다.
                 반복되는 일은 자동화하되, 결과를 믿을 수 있도록 기록과 검증을 함께 설계합니다.
               </p>
             </div>
@@ -749,7 +750,7 @@ export default function Portfolio() {
           <div className="wrap">
             <div className="head">
               <h2 id="practice-h">전문 영역</h2>
-              <p>운영, 분석, 도입 평가, 자동화까지 보안 운영의 전 과정을 다뤄 왔습니다.</p>
+              <p>보안정책 관리부터 사고 대응, 솔루션 도입, 자동화까지 조직의 정보보안 운영 전반을 다뤄 왔습니다.</p>
             </div>
             <dl className="practice">
               {practices.map((p, i) => {
@@ -769,7 +770,7 @@ export default function Portfolio() {
           <div className="wrap">
             <div className="head">
               <h2 id="career-h">경력과 기술</h2>
-              <p>총 경력 4년 6개월, 보안 엔지니어·보안운영 경력 3년 이상</p>
+              <p>총 경력 4년 6개월, 정보보안 실무 경력 3년 이상</p>
             </div>
             <div className="career-grid">
               <ol className="career">
@@ -800,7 +801,7 @@ export default function Portfolio() {
           </svg>
           <div className="wrap">
             <h2 id="contact-h">함께 일할 기회를 기다립니다</h2>
-            <p>엔드포인트 보안 운영, 침해사고 대응, 보안 운영 자동화와 관련된 제안이라면 편하게 연락 주세요.</p>
+            <p>정보보안 담당자, 보안 운영과 관련된 제안이라면 편하게 연락 주세요.</p>
             <div className="row">
               <a className="btn white" href="mailto:es3411@naver.com"><Mail size={18} />메일 보내기</a>
               <a className="mail" href="mailto:es3411@naver.com">es3411@naver.com</a>

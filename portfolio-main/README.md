@@ -1,6 +1,6 @@
 # Eunseok Ryu · Portfolio
 
-Security Engineer 포트폴리오 — React + Vite + Tailwind 기반.
+정보보안 전문가 포트폴리오 — React + Vite + Tailwind 기반.
 
 ---
 
